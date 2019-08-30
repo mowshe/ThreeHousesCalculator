@@ -36,17 +36,21 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" id="main">
-        <h1>FE3H Growth Rates Calculator</h1>
+        <div id="header">
+          <h1>FE3H Growth Rates</h1>
+        </div>
+        <div class="contain">
           <div class="charAndClass">
             <h2 class="title" id="characterName"> Character: {this.state.value}</h2>
+            <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
+            <GrowthRates character={this.state.value} />
           </div>
-          <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
           <div class="charAndClass">
             <h2 class="title" id="characterName"> Class: {this.state.charClass}</h2>
+            <ClassSearch callBackFromParent={this.classCallback}/>
+            <GrowthRates character={this.state.charClass} />
           </div>
-          <ClassSearch callBackFromParent={this.classCallback}/>
-          
-          <GrowthRates character={this.state.value} />
+        </div>
       </div>  
     );
   }

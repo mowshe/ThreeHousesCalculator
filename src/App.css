@@ -9,30 +9,49 @@ body{
   font-size:100%;
   line-height: 1;
   /*background: radial-gradient(80% 40%, #FCF2DD, #AD9C75);*/
+  background-image: url('./glacier.jpg');
+  /*background-image: url("./Bernadetta_Portrait.png");*/
+  }
+
+#tableloadingspot{
+  margin-top:40px;
+  margin-bottom:0px;
+  height:100%;
+}
+
+#header{
+  text-align: center;
+}
+
+#main{
+  margin-top:2%;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: .6em;
+  width:75%;
+  padding:10px;
+  height:100%;
   background-repeat: no-repeat;
   background: #606c88;
   background: -webkit-linear-gradient(to right, #606c88, #3f4c6b);
   background: linear-gradient(to right, #606c88, #3f4c6b); 
-  }
-
-#main{
-  margin:auto;
-  width:75%;
-  padding:10px;
-  border-left-style: solid;
-  height:100%;
+  opacity: .9;
 }
 
 table,tr{
   width:100%;
+  height: 3em;
   border: 3px solid #3f4c6b;
   background-color:#606c88;
-  border-radius:.5em;
+  border-radius:.6em;
   color: #ffffff;
+  margin:auto;
 }
 
 td{
   margin:auto;
+  height:30px;
+  padding:20px;
 }
 
 /* #BC412*/
@@ -59,11 +78,13 @@ h1{
   font-family: sans-serif;
   background-color: #ffffff;
   color:#3f4c6b;
-  font-size:3.5em;
+  font-size:3.3em;
   font-weight: 400;
   opacity: .80;
-  
-}
+  -webkit-box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
+  -moz-box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
+  box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
+    }
 
 div{
   color:white;
@@ -77,13 +98,20 @@ div{
 
 }
 
+.contain{
+  background-color:#3f4c6b;
+  border-bottom-left-radius: .6em;
+  border-bottom-right-radius: .6em;
+}
+
 .charAndClass{
+  padding-top:20px;
   position:relative;
   width:100%;
 }
 
 h2{
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 200;
   color:#ffffff;
   font-size:20px;

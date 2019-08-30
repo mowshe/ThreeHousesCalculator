@@ -13,38 +13,26 @@ class GrowthRates extends React.Component {
     }
   }
   
-
-
-  async componentDidUpdate(){
-
-    let cachedUnit = null;
-
-    if(cachedUnit==null ){      
+  async componentDidUpdate(prevProp){
+    if(prevProp.character !== this.props.character){      
       console.log("c");
       const url = "http://127.0.0.1:5000/growth/";
       const urlAddition = this.props.character;
       const response = await fetch(url+urlAddition);
       const data = await response.json();
-      cachedUnit = data;
       this.setState({
         loading:false,
         unit:data
       });
     }
-    if(cachedUnit != null)
-      console.log("test");
-      // this.setState({
-      //   loading:true,
-      //   unit:cachedUnit.value
-      // });
   }
 
 
   render() {
     return (
-        <div id="loading">
+        <div id="tableloadingspot">
             {this.state.loading  || !this.state.unit? (
-              <div>Pick a character or class (or both)</div>
+              <div  id="loading">Pick a character or class (or both)</div>
             ):(
 
           <table>

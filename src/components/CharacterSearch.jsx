@@ -3,7 +3,9 @@ import React from 'react';
 class CharacterSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={value:this.props.person}
+    this.state ={
+      value:this.props.person
+    }
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -18,7 +20,6 @@ class CharacterSearch extends React.Component {
       // Make this a button to use callback
           <form class="selection">
               <label>
-                <h1></h1>
                 <select value={this.state.value} onChange={this.handleChange}>
                         <option value="Annette">Character</option>
                         <option value="Annette">Annette</option>
