@@ -3,7 +3,7 @@ import React from 'react';
 class CharacterSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={value:""}
+    this.state ={value:this.props.person}
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -13,16 +13,18 @@ class CharacterSearch extends React.Component {
     this.setState({value : e.target.value});
   }
 
-  handleSubmit(e){
+  handleSubmit = (e) =>{
+    //console.log(e);
     console.log("Submitted");
-    this.setState({value:e.target.value});
-
+    //this.setState({value:e.target.value});
+    this.props.callBackFromParent(this.state.value);
   }
-
+// {this.props.callBackFromParent("Annette")}
   render() {
     return (
           <form onSubmit={this.handleSubmit}>
               <label>
+                <h1></h1>
                 <select value={this.state.value} onChange={this.handleChange}>
                         <option value="Annette">Annette</option>
                         <option value="Ashe">Ashe</option>
