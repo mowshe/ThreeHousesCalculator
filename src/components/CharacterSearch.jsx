@@ -18,10 +18,11 @@ class CharacterSearch extends React.Component {
   render() {
     return (
       // Make this a button to use callback
-          <form >
+          <form class="selection">
               <label>
                 <h1></h1>
                 <select value={this.state.value} onChange={this.handleChange}>
+                        <option value="Annette">Character</option>
                         <option value="Annette">Annette</option>
                         <option value="Ashe">Ashe</option>
                         <option value="Bernadetta">Bernadetta</option>

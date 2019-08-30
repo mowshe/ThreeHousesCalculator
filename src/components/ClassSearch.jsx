@@ -5,7 +5,6 @@ class ClassSearch extends React.Component {
     super(props);
     this.state ={value:""}
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -14,29 +13,25 @@ class ClassSearch extends React.Component {
     console.log(e.target.value);
   }
 
-  handleSubmit(e){
-    console.log("Submitted");
-    this.setState({char:e.target.value});
-
-  }
 
   render() {
     return (
-          <form onSubmit={this.handleSubmit}>
+          <form>
               <label>
                 <select value={this.state.value} onChange={this.handleChange}>
-                        <option value="Annette">Annette</option>
-                        <option value="Ashe">Ashe</option>
-                        <option value="Bernadetta">Bernadetta</option>
-                        <option value="Byleth">Byleth</option>
-                        <option value="Caspar">Caspar</option>
-                        <option value="Claude">Claude</option>
-                        <option value="Cyril">Cyril</option>
-                        <option value="Dedue">Dedue</option>
-                        <option value="Dimitri">Dimitri</option>
+                        <option value="Base">Base</option>
+                        <option value="Commoner">Commoner</option>
+                        <option value="Myrmidon">Myrmidon</option>
+                        <option value="Soldier">Soldier</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Lord">Lord</option>
+                        <option value="Mercenary">Mercenary</option>
+                        <option value="Thief">Thief</option>
+                        <option value="Armored Knight	">Armored Knight	</option>
+                        <option value="Cavalier">Cavalier</option>
                 </select>
               </label>
-            <input type="submit" value="Submit"/>
           </form>
     );
   }

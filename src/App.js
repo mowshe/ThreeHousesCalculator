@@ -27,21 +27,20 @@ class App extends React.Component {
   }
 
   componentDidUpdate(){
-    console.log("basodfijwasdpifoaj");
-    // point "value" to the character object it represents
   }
 
   render() {
     return (
-      <div className="App">
-        <h1>FE Three Houses Growth Rates Calculator</h1>
-
-          <h2> Character: {this.state.value}</h2>
+      <div className="App" id="main">
+        <h1>FE3H Growth Rates Calculator</h1>
+          <div class="charAndClass">
+            <h2 class="title"> Character: </h2><h2 id="characterName">{this.state.value}</h2>
+          </div>
           <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
           <h2>Class:</h2>
           <ClassSearch/>
           
-          <GrowthRates />
+          <GrowthRates character={this.state.value}/>
       </div>  
     );
   }
