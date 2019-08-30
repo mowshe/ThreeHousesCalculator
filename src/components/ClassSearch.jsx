@@ -10,9 +10,8 @@ class ClassSearch extends React.Component {
 
   handleChange(e){
     this.setState({value : e.target.value});
-    console.log(e.target.value);
+    this.props.callBackFromParent(e.target.value);
   }
-
 
   render() {
     return (

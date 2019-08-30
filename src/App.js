@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       value:"",
-      class:""
+      charClass:""
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.characterCallback = this.characterCallback.bind(this);
@@ -19,6 +19,10 @@ class App extends React.Component {
 
   characterCallback = (dataFromChild) => {
     this.setState({value:dataFromChild})
+  }
+
+  classCallback = (dataFromChild) => {
+    this.setState({charClass:dataFromChild})
   }
 
   handleSubmit(event){
@@ -34,13 +38,15 @@ class App extends React.Component {
       <div className="App" id="main">
         <h1>FE3H Growth Rates Calculator</h1>
           <div class="charAndClass">
-            <h2 class="title"> Character: </h2><h2 id="characterName">{this.state.value}</h2>
+            <h2 class="title" id="characterName"> Character: {this.state.value}</h2>
           </div>
           <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
-          <h2>Class:</h2>
-          <ClassSearch/>
+          <div class="charAndClass">
+            <h2 class="title" id="characterName"> Class: {this.state.charClass}</h2>
+          </div>
+          <ClassSearch callBackFromParent={this.classCallback}/>
           
-          <GrowthRates character={this.state.value}/>
+          <GrowthRates character={this.state.value} />
       </div>  
     );
   }

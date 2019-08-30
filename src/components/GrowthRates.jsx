@@ -13,6 +13,8 @@ class GrowthRates extends React.Component {
     }
   }
   
+
+
   async componentDidUpdate(){
 
     let cachedUnit = null;

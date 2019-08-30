@@ -5,13 +5,11 @@ class CharacterSearch extends React.Component {
     super(props);
     this.state ={value:this.props.person}
     this.handleChange = this.handleChange.bind(this);
-
   }
 
   handleChange(e){
     this.setState({value : e.target.value});
     this.props.callBackFromParent(e.target.value);
-
   }
 
 // {this.props.callBackFromParent("Annette")}
