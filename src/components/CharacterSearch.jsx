@@ -5,24 +5,20 @@ class CharacterSearch extends React.Component {
     super(props);
     this.state ={value:this.props.person}
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
   handleChange(e){
     this.setState({value : e.target.value});
+    this.props.callBackFromParent(e.target.value);
+
   }
 
-  handleSubmit = (e) =>{
-    //console.log(e);
-    console.log("Submitted");
-    //this.setState({value:e.target.value});
-    this.props.callBackFromParent(this.state.value);
-  }
 // {this.props.callBackFromParent("Annette")}
   render() {
     return (
-          <form onSubmit={this.handleSubmit}>
+      // Make this a button to use callback
+          <form >
               <label>
                 <h1></h1>
                 <select value={this.state.value} onChange={this.handleChange}>
@@ -37,7 +33,6 @@ class CharacterSearch extends React.Component {
                         <option value="Dimitri">Dimitri</option>
                 </select>
               </label>
-            <input type="submit" value="Submit"/>
           </form>
     );
   }

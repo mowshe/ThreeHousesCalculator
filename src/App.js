@@ -15,6 +15,8 @@ class App extends React.Component {
     this.characterCallback = this.characterCallback.bind(this);
   }
 
+  
+
   characterCallback = (dataFromChild) => {
     this.setState({value:dataFromChild})
   }
@@ -24,8 +26,9 @@ class App extends React.Component {
     console.log(this.state.value);
   }
 
-  componentDidMount(){
-
+  componentDidUpdate(){
+    console.log("basodfijwasdpifoaj");
+    // point "value" to the character object it represents
   }
 
   render() {
@@ -38,7 +41,7 @@ class App extends React.Component {
           <h2>Class:</h2>
           <ClassSearch/>
           
-          <GrowthRates/>
+          <GrowthRates />
       </div>  
     );
   }
