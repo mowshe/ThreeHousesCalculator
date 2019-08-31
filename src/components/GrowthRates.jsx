@@ -13,6 +13,11 @@ class GrowthRates extends React.Component {
     }
   }
   
+  addStats = (unitName,unitClass) =>{
+    
+  }
+
+
   async componentDidUpdate(prevProp){
     if(prevProp.character !== this.props.character){      
       console.log("c");
@@ -27,12 +32,11 @@ class GrowthRates extends React.Component {
     }
   }
 
-
   render() {
     return (
         <div id="tableloadingspot">
             {this.state.loading  || !this.state.unit? (
-              <div  id="loading">Pick a character or class (or both)</div>
+              <div  id="loading"></div>
             ):(
 
           <table>

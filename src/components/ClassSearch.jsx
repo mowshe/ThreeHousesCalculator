@@ -15,7 +15,7 @@ class ClassSearch extends React.Component {
 
   render() {
     return (
-          <form>
+            <form class="selection">
               <label>
                 <select value={this.state.value} onChange={this.handleChange}>
                         <option value="Base">Base</option>

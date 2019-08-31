@@ -21,6 +21,7 @@ body{
 
 #header{
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #main{
@@ -29,19 +30,23 @@ body{
   margin-right:auto;
   border-radius: .6em;
   width:75%;
-  padding:10px;
+  padding-top:10px;
   height:100%;
   background-repeat: no-repeat;
   background: #606c88;
   background: -webkit-linear-gradient(to right, #606c88, #3f4c6b);
   background: linear-gradient(to right, #606c88, #3f4c6b); 
   opacity: .9;
+  -webkit-box-shadow: -14px 16px 29px 23px rgba(0,0,0,0.47);
+  -moz-box-shadow: -14px 16px 29px 23px rgba(0,0,0,0.47);
+  box-shadow: -14px 16px 29px 23px rgba(0,0,0,0.47);
+  
 }
 
 table,tr{
   width:100%;
   height: 3em;
-  border: 3px solid #3f4c6b;
+  border: 0px solid #3f4c6b;
   background-color:#606c88;
   border-radius:.6em;
   color: #ffffff;
@@ -56,42 +61,61 @@ td{
 
 /* #BC412*/
 select{
-  font-size:15px;
-  background-color:White ;
+  font-size:20px;
+  color:black;
+  background-color:#ffffff ;
   padding: .5em .5em .5em .8em;
   border-radius: .2em;
-  font-family: sans-serif;
-  opacity: .50;
-  width:35%;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  opacity: .60;
+  font-weight: 200;
+  width:100%;
+
 }
 
 .selection{
   width:100%;
+}
+
+option{
+  background-color: #606c88 !important;
+  color:#ffffff;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  opacity: .4;
+}
+
+option:active{
   color:red;
 }
 
-select:active, select:hover{
+select:active {
   /*background-color:#D0C2A2;*/
+  background-color: #606c88 !important;
+  background:transparent;
+  color:white;
+  border-bottom-left-radius: .2em;
+  border-bottom-right-radius: .2em;
+
 }
 
 h1{
-  font-family: sans-serif;
-  background-color: #ffffff;
-  color:#3f4c6b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*color:rgba(252, 242, 221, 0.664);*/
+  color:#ffffff;
+  text-shadow: -4px 3px 6px #000000;
   font-size:3.3em;
   font-weight: 400;
-  opacity: .80;
-  -webkit-box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
-  -moz-box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
-  box-shadow: -3px -6px 148px -49px rgba(252,242,221,0.88);
-    }
+  opacity: .63;
+  margin-bottom: 0;    
+}
 
 div{
   color:white;
+  text-shadow: -4px 3px 6px #000000;
 }
 
 #statNames{
-  font-weight:1000;
+  font-weight:200;
 }
 
 #actualStats{
@@ -111,10 +135,12 @@ div{
 }
 
 h2{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-left:10px;
+  font-family: Verdana, serif;
   font-weight: 200;
   color:#ffffff;
   font-size:20px;
+  text-shadow: -4px 3px 6px #000000;
 }
 
 .title{

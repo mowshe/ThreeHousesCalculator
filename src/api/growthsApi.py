@@ -12,7 +12,6 @@ CORS(app, support_credentials=True)
 def login():
   return jsonify({'success': 'ok'})
 
-
 growths = {
         "Annette": 
         {
@@ -52,7 +51,6 @@ growths = {
             "Res":"22",
             "Cha":"22",
         },
-
         "Byleth": 
         {
             "Hp":"111",
@@ -65,7 +63,80 @@ growths = {
             "Res":"11",
             "Cha":"11",
         },
-
+        "Caspar":
+        {  
+            "Hp": "55",
+            "Str": "45",
+            "Mag": "25",
+            "Dex": "45",
+            "Spd": "45",
+            "Lck": "40",
+            "Def": "30",
+            "Res": "20",
+            "Cha": "25"
+        },
+        "Claude":
+        {
+            "Hp": "35",
+            "Str": "40",
+            "Mag": "25",
+            "Dex": "60",
+            "Spd": "55",
+            "Lck": "45",
+            "Def": "30",
+            "Res": "25",
+            "Cha": "55"
+        },
+        "Cyril":
+        {
+        
+            "Hp": "35",
+            "Str": "20",
+            "Mag": "15",
+            "Dex": "40",
+            "Spd": "40",
+            "Lck": "30",
+            "Def": "10",
+            "Res": "10",
+            "Cha": "15"
+        },
+        "Dedue":
+        {
+            "Hp": "60",
+            "Str": "50",
+            "Mag": "15",
+            "Dex": "30",
+            "Spd": "20",
+            "Lck": "25",
+            "Def": "50",
+            "Res": "10",
+            "Cha": "30"
+        },
+        "Dimitri":
+        {
+        
+            "Hp": "55",
+            "Str": "60",
+            "Mag": "20",
+            "Dex": "50",
+            "Spd": "50",
+            "Lck": "25",
+            "Def": "40",
+            "Res": "20",
+            "Cha": "55"
+        },
+        "Dorothea": 
+        {
+            "Hp": "40",
+            "Str": "20",
+            "Mag": "40",
+            "Dex": "45",
+            "Spd": "40",
+            "Lck": "35",
+            "Def": "15",
+            "Res": "35",
+            "Cha": "40"
+        },
         "Myrmidon":
         {
             "Hp":"10",
@@ -78,7 +149,7 @@ growths = {
             "Res":"-5",
             "Cha":"5",
         },        
-        
+
         "Soldier":
         {
             "Hp":"10",
@@ -91,13 +162,6 @@ growths = {
             "Res":"-5",
             "Cha":"5",
         }
-
-
-
-
-        
-
-
 }
 
 class Growth(Resource):

@@ -37,18 +37,20 @@ class App extends React.Component {
     return (
       <div className="App" id="main">
         <div id="header">
-          <h1>FE3H Growth Rates</h1>
+          <h1>Fire Emblem Growth Rates</h1>
         </div>
         <div class="contain">
           <div class="charAndClass">
             <h2 class="title" id="characterName"> Character: {this.state.value}</h2>
             <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
             <GrowthRates character={this.state.value} />
-          </div>
-          <div class="charAndClass">
             <h2 class="title" id="characterName"> Class: {this.state.charClass}</h2>
             <ClassSearch callBackFromParent={this.classCallback}/>
             <GrowthRates character={this.state.charClass} />
+            <h2 class="title" id="characterName"> Character + Class: {this.state.charClass}</h2>
+            <ClassSearch callBackFromParent={this.classCallback}/>
+            <GrowthRates character={this.state.charClass} />
+
           </div>
         </div>
       </div>  
