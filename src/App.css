@@ -84,8 +84,16 @@ option{
   opacity: .4;
 }
 
+a:hover{
+  background-color:red;
+}
+
+option:hover{
+}
+
 option:active{
-  color:red;
+
+  opacity: .3;
 }
 
 select:active {

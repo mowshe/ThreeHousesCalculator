@@ -47,10 +47,8 @@ class App extends React.Component {
             <h2 class="title" id="characterName"> Class: {this.state.charClass}</h2>
             <ClassSearch callBackFromParent={this.classCallback}/>
             <GrowthRates character={this.state.charClass} />
-            <h2 class="title" id="characterName"> Character + Class: {this.state.charClass}</h2>
-            <ClassSearch callBackFromParent={this.classCallback}/>
+            <h2 class="title" id="characterName"> Character + Class:</h2>
             <GrowthRates character={this.state.charClass} />
-
           </div>
         </div>
       </div>  

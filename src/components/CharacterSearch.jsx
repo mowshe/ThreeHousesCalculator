@@ -14,6 +14,7 @@ class CharacterSearch extends React.Component {
     this.props.callBackFromParent(e.target.value);
   }
 
+  
 // {this.props.callBackFromParent("Annette")}
   render() {
     return (
@@ -21,7 +22,7 @@ class CharacterSearch extends React.Component {
           <form class="selection">
               <label>
                 <select value={this.state.value} onChange={this.handleChange}>
-                        <option value="Annette">Character</option>
+                        <option value="Character">Character</option>
                         <option value="Annette">Annette</option>
                         <option value="Ashe">Ashe</option>
                         <option value="Bernadetta">Bernadetta</option>

@@ -50,7 +50,6 @@ class GrowthRates extends React.Component {
                   <td>DEF</td>
                   <td>RES</td>
                   <td>CHA</td>
-
               </tr>
               <tr class="actualStats">
                   <td>{this.state.unit.Hp}</td>
@@ -62,7 +61,6 @@ class GrowthRates extends React.Component {
                   <td>{this.state.unit.Def}</td>
                   <td>{this.state.unit.Res}</td>
                   <td>{this.state.unit.Cha}</td>
-
               </tr>
             </table>)
           }
