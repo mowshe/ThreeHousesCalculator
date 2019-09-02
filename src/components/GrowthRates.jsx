@@ -8,9 +8,29 @@ class GrowthRates extends React.Component {
     
     super(props);
     this.state = { 
-      unit:null,
+      unit:{
+        Hp:0,
+        Str:0,
+        Mag:0,
+        Dex:0,
+        Spd:0,
+        Lck:0,
+        Def:0,
+        Res:0,
+        Cha:0
+      },
       loading:true,
-      charClass:null
+      charClass:{
+        Hp:0,
+        Str:0,
+        Mag:0,
+        Dex:0,
+        Spd:0,
+        Lck:0,
+        Def:0,
+        Res:0,
+        Cha:0
+      }
     }
   }
   
@@ -36,13 +56,24 @@ class GrowthRates extends React.Component {
               this.setState({
                 loading:false,
                 // this SHOULD be charClass:data
-                unit:data
+                charClass:data
               });
             }
         }
       }
     else{
-      // this is where you should put both objects 
+      // this is where you should put both objects
+      const url = "http://127.0.0.1:5000/growth/";
+            const urlAddition = this.props.character;
+            const response = await fetch(url+urlAddition);
+            const data = await response.json();
+            const res2 =  this.props.charClass;
+            const data2 = await response.json();
+            this.setState({
+              loading:false,
+              unit:data,
+              charClass:data2
+            });
     }
   }
 
@@ -66,7 +97,7 @@ class GrowthRates extends React.Component {
                   <td>CHA</td>
               </tr>
               <tr class="actualStats">
-                  <td>{this.state.unit.Hp}</td>
+                  <td>{+this.state.unit.Hp + +this.state.charClass.Hp}</td>
                   <td>{this.state.unit.Str}</td>
                   <td>{this.state.unit.Mag}</td>
                   <td>{this.state.unit.Dex}</td>
