@@ -43,12 +43,12 @@ class App extends React.Component {
           <div class="charAndClass">
             <h2 class="title" id="characterName"> Character: {this.state.value}</h2>
             <CharacterSearch callBackFromParent={this.characterCallback}  handleSubmit={this.handleSubmit.bind(this)}/>
-            <GrowthRates character={this.state.value} />
+            <GrowthRates type={"charUnit"} character={this.state.value} />
             <h2 class="title" id="characterName"> Class: {this.state.charClass}</h2>
             <ClassSearch callBackFromParent={this.classCallback}/>
-            <GrowthRates character={this.state.charClass} />
+            <GrowthRates type={"charClass"} character={this.state.charClass} />
             <h2 class="title" id="characterName"> Character + Class:</h2>
-            <GrowthRates character={this.state.charClass} />
+            <GrowthRates type={"both"} character={this.state.charClass} />
           </div>
         </div>
       </div>  

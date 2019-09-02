@@ -10,6 +10,7 @@ class GrowthRates extends React.Component {
     this.state = { 
       unit:null,
       loading:true,
+      charClass:null
     }
   }
   
@@ -17,18 +18,31 @@ class GrowthRates extends React.Component {
     
   }
 
-
+  // Make a specific case where instead of 
   async componentDidUpdate(prevProp){
-    if(prevProp.character !== this.props.character){      
-      console.log("c");
-      const url = "http://127.0.0.1:5000/growth/";
-      const urlAddition = this.props.character;
-      const response = await fetch(url+urlAddition);
-      const data = await response.json();
-      this.setState({
-        loading:false,
-        unit:data
-      });
+    if (this.props.type !== "both"){
+      if(prevProp.character !== this.props.character){      
+            const url = "http://127.0.0.1:5000/growth/";
+            const urlAddition = this.props.character;
+            const response = await fetch(url+urlAddition);
+            const data = await response.json();            
+            if(this.props.type === "charUnit"){
+              this.setState({
+                loading:false,
+                unit:data
+              });
+            }
+            else{
+              this.setState({
+                loading:false,
+                // this SHOULD be charClass:data
+                unit:data
+              });
+            }
+        }
+      }
+    else{
+      // this is where you should put both objects 
     }
   }
 
