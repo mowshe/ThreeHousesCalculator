@@ -32,6 +32,29 @@ class CharacterSearch extends React.Component {
                         <option value="Cyril">Cyril</option>
                         <option value="Dedue">Dedue</option>
                         <option value="Dimitri">Dimitri</option>
+                        <option value="Dorothea">Dorothea</option>
+                        <option value="Edelgard">Edelgard</option>
+                        <option value="Felix">Felix</option>
+                        <option value="Ferdinand">Ferdinand</option>
+                        <option value="Flayn">Flayn</option>
+                        <option value="Gilbert">Gilbert</option>
+                        <option value="Hanneman">Hanneman</option>
+                        <option value="Hilda">Hilda</option>
+                        <option value="Hubert">Hubert</option>
+                        <option value="Ignatz">Ignatz</option>
+                        <option value="Ingrid">Ingrid</option>
+                        <option value="Leonie">Leonie</option>
+                        <option value="Linhardt">Linhardt</option>
+                        <option value="Lysithea">Lysithea</option>
+                        <option value="Manuela">Manuela</option>
+                        <option value="Marianne">Marianne</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Petra">Petra</option>
+                        <option value="Seteth">Seteth</option>
+                        <option value="Shamir">Shamir</option>
+                        <option value="Sylvain">Sylvain</option>
+
+
                 </select>
               </label>
           </form>
